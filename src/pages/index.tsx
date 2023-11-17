@@ -18,7 +18,7 @@ export default function Home() {
 					className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium
 					uppercase mt-10 mb-5'
 				>
-					&ldquo; QUALITY OVER QUANTITY &rdquo; 👇
+					&ldquo; HÃY ĐỌ SỨC VỚI CHUỖI BÀI LUYỆN &rdquo; 👇
 				</h1>
 				<div className='relative overflow-x-auto mx-auto px-6 pb-10'>
 					{loadingProblems && (
@@ -33,20 +33,20 @@ export default function Home() {
 							<thead className='text-xs text-gray-700 uppercase dark:text-gray-400 border-b '>
 								<tr>
 									<th scope='col' className='px-1 py-3 w-0 font-medium'>
-										Status
+										Trạng thái
 									</th>
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
-										Title
+										Tiêu đề
 									</th>
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
-										Difficulty
+										Mức độ
 									</th>
 
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
-										Category
+										Chủ đề
 									</th>
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
-										Solution
+										Lời giải
 									</th>
 								</tr>
 							</thead>
