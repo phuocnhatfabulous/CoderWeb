@@ -66,16 +66,30 @@ const Login: React.FC<LoginProps> = () => {
                     name="email"
                     id="email"
                     className="
-            border-2 outline-none sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
-            bg-gray-600 border-gray-500 placeholder-gray-400 text-white
-        "
+                        border-2 
+                        outline-none 
+                        sm:text-sm 
+                        rounded-lg 
+                        focus:ring-blue-500 
+                        focus:border-blue-500 
+                        block w-full 
+                        p-2.5
+                        bg-gray-600 
+                        border-gray-500 
+                        placeholder-gray-400 
+                        text-white"
                     placeholder="username@gmail.com"
                 />
             </div>
             <div>
                 <label
                     htmlFor="password"
-                    className="text-sm font-medium block mb-2 text-gray-300"
+                    className="
+                        text-sm 
+                        font-medium 
+                        block 
+                        mb-2 
+                        text-gray-300"
                 >
                     Mật khẩu
                 </label>
@@ -85,9 +99,18 @@ const Login: React.FC<LoginProps> = () => {
                     name="password"
                     id="password"
                     className="
-            border-2 outline-none sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
-            bg-gray-600 border-gray-500 placeholder-gray-400 text-white
-        "
+                        border-2 
+                        outline-none 
+                        sm:text-sm 
+                        rounded-lg 
+                        focus:ring-blue-500 
+                        focus:border-blue-500 
+                        block w-full 
+                        p-2.5 
+                        bg-gray-600 
+                        border-gray-500 
+                        placeholder-gray-400 
+                        text-white"
                     placeholder="*******"
                 />
             </div>
@@ -100,10 +123,13 @@ const Login: React.FC<LoginProps> = () => {
             >
                 {loading ? "Đang tải..." : "Đăng nhập"}
             </button>
+            
+
             <button
                 className="flex w-full justify-end"
                 onClick={() => handleClick("forgotPassword")}
             >
+
                 <a
                     href="#"
                     className="text-sm block text-brand-orange hover:underline w-full text-right"
@@ -111,6 +137,7 @@ const Login: React.FC<LoginProps> = () => {
                     Quên mật khẩu
                 </a>
             </button>
+            
             <div className="text-sm font-medium text-gray-300">
                 Chưa có tài khoản?{" "}
                 <a
