@@ -75,7 +75,15 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2"
+              className="
+              py-1.5 
+              px-3 
+              cursor-pointer 
+              rounded 
+              text-brand-orange 
+              hover:bg-dark-fill-2
+              select-none
+              "
             >
               Trang chủ
             </Link>
@@ -84,7 +92,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/courses"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2"
+              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Khóa học
             </Link>
@@ -93,7 +101,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/practices"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2"
+              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Luyện tập
             </Link>
@@ -102,7 +110,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/contests"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2"
+              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Cuộc thi
             </Link>
@@ -121,7 +129,9 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
                 }))
               }
             >
-              <button className="bg-dark-fill-3 py-1 px-2 cursor-pointer rounded ">Đăng nhập</button>
+              <button className="hover:bg-brand-orange hover:text-white bg-dark-fill-3 py-1 px-4 cursor-pointer rounded-full ">
+                Đăng nhập
+              </button>
             </Link>
           )}
           {user && problemPage && <Timer />}
