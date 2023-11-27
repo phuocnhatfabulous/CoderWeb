@@ -1,13 +1,15 @@
 import Practice from "@/components/Practices/Practice";
 import Topbar from "@/components/Topbar/Topbar";
+import DefaultLayout from "@/components/layout/DefaultLayout";
 import React from "react";
 
 const PracticePage = () => {
     return (
-        <div className="bg-dark-layer-2 min-h-screen ">
-            <Topbar />
-            <Practice />
-        </div>
+        <DefaultLayout title={"Luyện tập"}>
+            <div className=" my-8 place-content-center space-y-6">
+                <Practice />
+            </div>
+        </DefaultLayout>
     );
 };
 
