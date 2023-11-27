@@ -53,7 +53,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             >
               <FaChevronLeft />
             </div>
-            <Link
+            {/* <Link
               href="/"
               className="flex items-center gap-2 font-medium max-w-[170px] text-dark-gray-8 cursor-pointer"
             >
@@ -61,7 +61,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
                 <BsList />
               </div>
               <p>Problem List</p>
-            </Link>
+            </Link> */}
             <div
               className="flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
               onClick={() => handleProblemChange(true)}
@@ -73,7 +73,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
         <div className="flex items-center space-x-6 justify-start">
           <div>
             <Link
-              href="/"
+              href="/courses"
               rel="noreferrer"
               className="
               py-1.5 
@@ -84,15 +84,6 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               hover:bg-dark-fill-2
               select-none
               "
-            >
-              Trang chủ
-            </Link>
-          </div>
-          <div>
-            <Link
-              href="/courses"
-              rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Khóa học
             </Link>
@@ -108,11 +99,29 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
           </div>
           <div>
             <Link
+              href="/homeworks"
+              rel="noreferrer"
+              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
+            >
+              Bài tập
+            </Link>
+          </div>
+          <div>
+            <Link
               href="/contests"
               rel="noreferrer"
               className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Cuộc thi
+            </Link>
+          </div>
+          <div>
+            <Link
+              href="/ranking"
+              rel="noreferrer"
+              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
+            >
+              Xếp hạng
             </Link>
           </div>
         </div>

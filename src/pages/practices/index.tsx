@@ -1,14 +1,16 @@
-import Practice from "@/components/Practices/Practice";
-import Topbar from "@/components/Topbar/Topbar";
-import React from "react";
+import Practice from '@/components/Practices/Practice';
+import Topbar from '@/components/Topbar/Topbar';
+import React from 'react';
 
 const PracticePage = () => {
-    return (
-        <div className="bg-dark-layer-2 min-h-screen ">
-            <Topbar />
-            <Practice />
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-dark-layer-2 ">
+      <div className="flex">
+        <Topbar />
+      </div>
+      <Practice />
+    </div>
+  );
 };
 
 export default PracticePage;
