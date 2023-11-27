@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const HomeWork = () => {
-  useEffect(() => {
-    document.title = 'Bài tập | ITUTC2';
-  }, []);
   return <div>HomeWork</div>;
 };
 

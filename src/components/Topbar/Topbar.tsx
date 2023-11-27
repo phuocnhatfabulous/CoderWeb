@@ -40,15 +40,15 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 mb-5 flex z-10 w-full shrink-0 items-center px-5 py-2 bg-dark-blue shadow-md shadow-white-blue-400 text-dark-gray-7">
-      <div className={`flex w-full items-center justify-between ${!problemPage ? 'max-w-[1200px] mx-auto' : ''}`}>
+    <nav className="fixed top-0 left-0 z-10 mb-5 flex w-full shrink-0 items-center bg-dark-blue px-5 py-2 text-dark-gray-7 shadow-md shadow-white-blue-400">
+      <div className={`flex w-full items-center justify-between ${!problemPage ? 'mx-auto max-w-[1200px]' : ''}`}>
         <Link href="/" className="flex items-center">
           <Image src="/itcoder-logo.svg" alt="Logo" height={200} width={200} />
         </Link>
         {problemPage && (
-          <div className="flex items-center gap-4 flex-1 justify-center">
+          <div className="flex flex-1 items-center justify-center gap-4">
             <div
-              className="flex items-center justify-center rounded bg-white-blue-200 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-white-blue-200 hover:bg-dark-fill-2"
               onClick={() => handleProblemChange(false)}
             >
               <FaChevronLeft />
@@ -63,26 +63,26 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               <p>Problem List</p>
             </Link> */}
             <div
-              className="flex items-center justify-center rounded bg-white-blue-400 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
+              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-white-blue-400 hover:bg-dark-fill-2"
               onClick={() => handleProblemChange(true)}
             >
               <FaChevronRight />
             </div>
           </div>
         )}
-        <div className="flex items-center space-x-6 justify-start">
+        <div className="flex items-center justify-start space-x-6">
           <div>
             <Link
               href="/courses"
               rel="noreferrer"
               className="
+              cursor-pointer 
+              select-none 
+              rounded 
               py-1.5 
               px-3 
-              cursor-pointer 
-              rounded 
-              text-brand-orange 
+              text-brand-orange
               hover:bg-dark-fill-2
-              select-none
               "
             >
               Khóa học
@@ -92,7 +92,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/practices"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
+              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
             >
               Luyện tập
             </Link>
@@ -101,7 +101,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/homeworks"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
+              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
             >
               Bài tập
             </Link>
@@ -110,14 +110,23 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/contests"
               rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
+              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
             >
               Cuộc thi
             </Link>
           </div>
+          <div>
+            <Link
+              href="/ranks"
+              rel="noreferrer"
+              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+            >
+              Xếp hạng
+            </Link>
+          </div>
         </div>
 
-        <div className="flex items-center space-x-4 justify-start">
+        <div className="flex items-center justify-start space-x-4">
           {!user && (
             <Link
               href="/auth"
@@ -129,33 +138,33 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
                 }))
               }
             >
-              <button className="hover:bg-brand-orange hover:text-white text-white-blue bg-white-blue-400k bg-dark-fill-3 py-1 px-4 cursor-pointer rounded-full ">
+              <button className="bg-white-blue-400k cursor-pointer rounded-full bg-dark-fill-3 py-1 px-4 text-white-blue hover:bg-brand-orange hover:text-white ">
                 Đăng nhập
               </button>
             </Link>
           )}
           {user && problemPage && <Timer />}
           {user && (
-            <div className="cursor-pointer group relative">
+            <div className="group relative cursor-pointer">
               <Image src="/avatar.svg" alt="Avatar" width={30} height={30} className="rounded-full" />
               <div
                 className="
                 absolute 
                 top-10 
                 left-2/4 
-                -translate-x-2/4  
+                z-40  
                 mx-auto 
-                bg-dark-layer-1 
-                text-brand-orange 
-                p-2 
+                -translate-x-2/4 
+                scale-0 
                 rounded 
-                shadow-lg 		
-                z-40 
-                group-hover:scale-100 
-                scale-0 			
-                transition-all
-                duration-300 
-                ease-in-out"
+                bg-dark-layer-1 
+                p-2 		
+                text-brand-orange 
+                shadow-lg 
+                transition-all 			
+                duration-300
+                ease-in-out 
+                group-hover:scale-100"
               >
                 <p className="text-sm">{user.email}</p>
               </div>

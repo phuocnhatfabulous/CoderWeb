@@ -1,15 +1,12 @@
-import Course from "@/components/Course/Course";
-import Topbar from "@/components/Topbar/Topbar";
-import React from "react";
-import Slider from "@/components/Home/Slider";
-import DefaultLayout from "@/components/layout/DefaultLayout";
+import React from 'react';
+import DefaultLayout from '@/components/layout/DefaultLayout';
+import Ranking from '@/components/Ranking/Ranking';
 
 const RankPage = () => {
   return (
-    <DefaultLayout title={"Khóa học"}>
+    <DefaultLayout title={'Xếp hạng | ITUTC2'}>
       <div className=" my-8 place-content-center space-y-6">
-        <Slider />
-        <Course />
+        <Ranking />
       </div>
     </DefaultLayout>
   );

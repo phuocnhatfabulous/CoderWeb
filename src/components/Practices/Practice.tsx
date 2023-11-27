@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProblemsTable from '../ProblemsTable/ProblemsTable';
 
 const Practice = () => {
   const [loadingProblems, setLoadingProblems] = useState(true);
-  useEffect(() => {
-    document.title = 'Luyện tập | ITUTC2';
-  }, []);
+
   return (
     <div>
       <h1 className="mt-10 mb-5 text-center text-2xl font-medium uppercase text-dark-blue">
@@ -19,24 +17,24 @@ const Practice = () => {
             ))}
           </div>
         )}
-        <table className="text-sm text-left text-dark-blue sm:w-7/12 w-full max-w-[1200px] mx-auto">
+        <table className="mx-auto w-full max-w-[1200px] text-left text-sm text-dark-blue sm:w-7/12">
           {!loadingProblems && (
-            <thead className="text-xs text-brand-orange uppercase border-b ">
-              <tr>
-                <th scope="col" className="w-0 px-1 py-3 font-medium">
+            <thead className="border-b text-xs font-bold uppercase text-brand-orange ">
+              <tr className="divide-y-0 divide-solid">
+                <th scope="col" className="w-16 px-1 py-3 font-bold">
                   Trạng thái
                 </th>
-                <th scope="col" className="w-0 px-6 py-3 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Tiêu đề
                 </th>
-                <th scope="col" className="w-0 px-6 py-3 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Mức độ
                 </th>
 
-                <th scope="col" className="w-0 px-6 py-3 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Chủ đề
                 </th>
-                <th scope="col" className="w-0 px-6 py-3 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Lời giải
                 </th>
               </tr>
@@ -50,11 +48,11 @@ const Practice = () => {
 };
 const LoadingSkeleton = () => {
   return (
-    <div className="flex items-center space-x-12 mt-4 px-6">
-      <div className="w-6 h-6 shrink-0 rounded-full bg-white-blue-200"></div>
-      <div className="h-4 sm:w-52  w-32  rounded-full bg-white-blue-200"></div>
-      <div className="h-4 sm:w-52  w-32 rounded-full bg-white-blue-200"></div>
-      <div className="h-4 sm:w-52 w-32 rounded-full bg-white-blue-200"></div>
+    <div className="mt-4 flex items-center space-x-12 px-6">
+      <div className="h-6 w-6 shrink-0 rounded-full bg-white-blue-200"></div>
+      <div className="h-4 w-32  rounded-full  bg-white-blue-200 sm:w-52"></div>
+      <div className="h-4 w-32  rounded-full bg-white-blue-200 sm:w-52"></div>
+      <div className="h-4 w-32 rounded-full bg-white-blue-200 sm:w-52"></div>
       <span className="sr-only">Loading...</span>
     </div>
   );
