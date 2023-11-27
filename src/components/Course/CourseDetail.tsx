@@ -21,7 +21,9 @@ const CourseDetail = () => {
                 hover:bg-opacity-70
             `}
     >
-      <div className="hover:inline-flex font-medium text-sm ">hehe</div>
+      <div className="hover:inline-flex font-medium text-sm  ">
+        <Image src="/1.png" alt="" width={100} height={100} className='hover:translate-y-4  hover:bg-opacity-70' />
+      </div>
     </div>
   );
 };
