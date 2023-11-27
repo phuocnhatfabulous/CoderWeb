@@ -40,7 +40,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   };
 
   return (
-    <nav className="relative flex h-[50px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7">
+    <nav className="fixed top-0 left-0 mb-5 flex z-10 w-full shrink-0 items-center px-5 py-2 bg-dark-blue shadow-md shadow-white-blue-400 text-dark-gray-7">
       <div className={`flex w-full items-center justify-between ${!problemPage ? 'max-w-[1200px] mx-auto' : ''}`}>
         <Link href="/" className="flex items-center">
           <Image src="/itcoder-logo.svg" alt="Logo" height={200} width={200} />
@@ -129,7 +129,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
                 }))
               }
             >
-              <button className="hover:bg-brand-orange hover:text-white bg-dark-fill-3 py-1 px-4 cursor-pointer rounded-full ">
+              <button className="hover:bg-brand-orange hover:text-white text-white-blue bg-white-blue-400k bg-dark-fill-3 py-1 px-4 cursor-pointer rounded-full ">
                 Đăng nhập
               </button>
             </Link>
