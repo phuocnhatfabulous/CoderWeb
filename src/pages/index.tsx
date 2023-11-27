@@ -12,11 +12,13 @@ export default function Home() {
     if (!hasMounted) return null;
 
     return (
-        <>
-            <main className="bg-dark-layer-2 min-h-screen ">
+        <html>
+            <body className="bg-white-blue min-h-screen mt-14">
                 <Topbar />
-				<HomePage />
-            </main>
-        </>
+                <div className="pt-5 bg-white-blue">
+                    <HomePage />    
+                </div>
+            </body>
+        </html>
     );
 }
