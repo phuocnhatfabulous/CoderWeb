@@ -48,7 +48,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
         {problemPage && (
           <div className="flex items-center gap-4 flex-1 justify-center">
             <div
-              className="flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
+              className="flex items-center justify-center rounded bg-white-blue-200 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
               onClick={() => handleProblemChange(false)}
             >
               <FaChevronLeft />
@@ -63,7 +63,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               <p>Problem List</p>
             </Link> */}
             <div
-              className="flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
+              className="flex items-center justify-center rounded bg-white-blue-400 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer"
               onClick={() => handleProblemChange(true)}
             >
               <FaChevronRight />
@@ -113,15 +113,6 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
             >
               Cuộc thi
-            </Link>
-          </div>
-          <div>
-            <Link
-              href="/ranking"
-              rel="noreferrer"
-              className="py-1.5 px-3 cursor-pointer rounded text-brand-orange hover:bg-dark-fill-2 select-none"
-            >
-              Xếp hạng
             </Link>
           </div>
         </div>

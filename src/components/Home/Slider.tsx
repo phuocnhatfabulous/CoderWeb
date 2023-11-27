@@ -21,7 +21,7 @@ export default function Slider() {
                 mousewheel={true}
                 keyboard={true}
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="p-2 select-none"
+                className="p-2 select-none w-2/3"
             >
                 <SwiperSlide>
                     <Image

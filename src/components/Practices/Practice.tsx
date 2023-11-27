@@ -4,11 +4,11 @@ import ProblemsTable from '../ProblemsTable/ProblemsTable';
 const Practice = () => {
   const [loadingProblems, setLoadingProblems] = useState(true);
   useEffect(() => {
-    document.title = "Luyện tập | ITUTC2";
+    document.title = 'Luyện tập | ITUTC2';
   }, []);
   return (
     <div>
-      <h1 className="fmediumuppercaseont- mt-10 mb-5 text-center text-2xl text-gray-700 dark:text-gray-400">
+      <h1 className="mt-10 mb-5 text-center text-2xl font-medium uppercase text-dark-blue">
         &ldquo; HÃY ĐỌ SỨC VỚI CHUỖI BÀI LUYỆN &rdquo; 👇
       </h1>
       <div className="relative mx-auto overflow-x-auto px-6 pb-10">
@@ -19,9 +19,9 @@ const Practice = () => {
             ))}
           </div>
         )}
-        <table className="mx-auto w-full max-w-[1200px] text-left text-sm text-gray-500 dark:text-gray-400 sm:w-7/12">
+        <table className="text-sm text-left text-dark-blue sm:w-7/12 w-full max-w-[1200px] mx-auto">
           {!loadingProblems && (
-            <thead className="border-b text-xs uppercase text-gray-700 dark:text-gray-400 ">
+            <thead className="text-xs text-brand-orange uppercase border-b ">
               <tr>
                 <th scope="col" className="w-0 px-1 py-3 font-medium">
                   Trạng thái
@@ -50,11 +50,11 @@ const Practice = () => {
 };
 const LoadingSkeleton = () => {
   return (
-    <div className="mt-4 flex items-center space-x-12 px-6">
-      <div className="h-6 w-6 shrink-0 rounded-full bg-dark-layer-1"></div>
-      <div className="h-4 w-32  rounded-full  bg-dark-layer-1 sm:w-52"></div>
-      <div className="h-4 w-32  rounded-full bg-dark-layer-1 sm:w-52"></div>
-      <div className="h-4 w-32 rounded-full bg-dark-layer-1 sm:w-52"></div>
+    <div className="flex items-center space-x-12 mt-4 px-6">
+      <div className="w-6 h-6 shrink-0 rounded-full bg-white-blue-200"></div>
+      <div className="h-4 sm:w-52  w-32  rounded-full bg-white-blue-200"></div>
+      <div className="h-4 sm:w-52  w-32 rounded-full bg-white-blue-200"></div>
+      <div className="h-4 sm:w-52 w-32 rounded-full bg-white-blue-200"></div>
       <span className="sr-only">Loading...</span>
     </div>
   );

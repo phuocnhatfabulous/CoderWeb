@@ -45,7 +45,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
 
     return (
         <>
-            <tbody className="text-white">
+            <tbody className="text-dark-blue">
                 {problems.map((problem, idx) => {
                     const difficulyColor =
                         problem.difficulty === "Dễ"
@@ -56,7 +56,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                     return (
                         <tr
                             className={`${
-                                idx % 2 == 1 ? "bg-dark-layer-1" : ""
+                                idx % 2 == 1 ? "bg-white-blue-200" : ""
                             }`}
                             key={problem.id}
                         >
@@ -101,7 +101,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                                         }
                                     />
                                 ) : (
-                                    <p className="text-gray-400">
+                                    <p className="text-cyan-700">
                                         Đang cập nhật
                                     </p>
                                 )}
