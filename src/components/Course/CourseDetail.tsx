@@ -6,22 +6,22 @@ const CourseDetail = () => {
     <div
       onClick={() => {}}
       className={`
+                m-5
                 flex
+                cursor-pointer
                 flex-col
                 items-center
                 justify-center
                 gap-2
-                p-20
-                m-5
-                hover:text-neutral-800
-                transition
-                cursor-pointer
-                bg-white-blue
                 rounded-xl
+                bg-white-blue
+                p-20
+                transition
                 hover:bg-opacity-70
+                hover:text-neutral-800
             `}
     >
-      <div className="hover:inline-flex font-medium text-sm ">hehe</div>
+      <div className="text-sm font-medium hover:inline-flex ">hehe</div>
     </div>
   );
 };
