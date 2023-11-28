@@ -4,6 +4,7 @@ import useHasMounted from "@/hooks/useHasMounted";
 
 import { useState } from "react";
 import HomePage from "@/components/Home/HomePage";
+import DefaultLayout from "@/components/layout/DefaultLayout";
 
 export default function Home() {
     const [loadingProblems, setLoadingProblems] = useState(true);
@@ -12,11 +13,8 @@ export default function Home() {
     if (!hasMounted) return null;
 
     return (
-        <>
-            <main className="bg-dark-layer-2 min-h-screen ">
-                <Topbar />
-				<HomePage />
-            </main>
-        </>
+        <DefaultLayout title={"ITUTC2 CODER"}>
+            <HomePage />
+        </DefaultLayout>
     );
 }

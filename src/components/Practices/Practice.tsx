@@ -3,48 +3,38 @@ import ProblemsTable from '../ProblemsTable/ProblemsTable';
 
 const Practice = () => {
   const [loadingProblems, setLoadingProblems] = useState(true);
+
   return (
     <div>
-      <h1
-        className="
-                    text-2xl 
-                    text-center 
-                    text-gray-700 
-                    dark:text-gray-400 
-                    font-medium
-                    uppercase 
-                    mt-10 
-                    mb-5
-                "
-      >
+      <h1 className="mt-10 mb-5 text-center text-2xl font-medium uppercase text-dark-blue">
         &ldquo; HÃY ĐỌ SỨC VỚI CHUỖI BÀI LUYỆN &rdquo; 👇
       </h1>
-      <div className="relative overflow-x-auto mx-auto px-6 pb-10">
+      <div className="relative mx-auto overflow-x-auto px-6 pb-10">
         {loadingProblems && (
-          <div className="max-w-[1200px] mx-auto sm:w-7/12 w-full animate-pulse">
+          <div className="mx-auto w-full max-w-[1200px] animate-pulse sm:w-7/12">
             {[...Array(10)].map((_, idx) => (
               <LoadingSkeleton key={idx} />
             ))}
           </div>
         )}
-        <table className="text-sm text-left text-gray-500 dark:text-gray-400 sm:w-7/12 w-full max-w-[1200px] mx-auto">
+        <table className="mx-auto w-full max-w-[1200px] text-left text-sm text-dark-blue sm:w-7/12">
           {!loadingProblems && (
-            <thead className="text-xs text-gray-700 uppercase dark:text-gray-400 border-b ">
-              <tr>
-                <th scope="col" className="px-1 py-3 w-0 font-medium">
+            <thead className="border-b text-xs font-bold uppercase text-brand-orange ">
+              <tr className="divide-y-0 divide-solid">
+                <th scope="col" className="w-16 px-1 py-3 font-bold">
                   Trạng thái
                 </th>
-                <th scope="col" className="px-6 py-3 w-0 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Tiêu đề
                 </th>
-                <th scope="col" className="px-6 py-3 w-0 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Mức độ
                 </th>
 
-                <th scope="col" className="px-6 py-3 w-0 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Chủ đề
                 </th>
-                <th scope="col" className="px-6 py-3 w-0 font-medium">
+                <th scope="col" className="w-0 px-6 py-3 font-bold">
                   Lời giải
                 </th>
               </tr>
@@ -58,11 +48,11 @@ const Practice = () => {
 };
 const LoadingSkeleton = () => {
   return (
-    <div className="flex items-center space-x-12 mt-4 px-6">
-      <div className="w-6 h-6 shrink-0 rounded-full bg-dark-layer-1"></div>
-      <div className="h-4 sm:w-52  w-32  rounded-full bg-dark-layer-1"></div>
-      <div className="h-4 sm:w-52  w-32 rounded-full bg-dark-layer-1"></div>
-      <div className="h-4 sm:w-52 w-32 rounded-full bg-dark-layer-1"></div>
+    <div className="mt-4 flex items-center space-x-12 px-6">
+      <div className="h-6 w-6 shrink-0 rounded-full bg-white-blue-200"></div>
+      <div className="h-4 w-32  rounded-full  bg-white-blue-200 sm:w-52"></div>
+      <div className="h-4 w-32  rounded-full bg-white-blue-200 sm:w-52"></div>
+      <div className="h-4 w-32 rounded-full bg-white-blue-200 sm:w-52"></div>
       <span className="sr-only">Loading...</span>
     </div>
   );

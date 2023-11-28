@@ -1,26 +1,29 @@
-import React from "react";
+import React from 'react';
+import Image from 'next/image';
 
 const CourseDetail = () => {
-    return (
-        <div
-            onClick={()=>{}}
-            className={`
+  return (
+    <div
+      onClick={() => {}}
+      className={`
+                m-5
                 flex
+                cursor-pointer
                 flex-col
                 items-center
                 justify-center
                 gap-2
-                p-3
-                border-b-2
-                hover:text-neutral-800
+                rounded-xl
+                bg-white-blue
+                p-20
                 transition
-                cursor-pointer
-                
+                hover:bg-opacity-70
+                hover:text-neutral-800
             `}
-        >
-            <div className="font-medium text-sm">Label</div>
-        </div>
-    );
+    >
+      <div className="text-sm font-medium hover:inline-flex ">hehe</div>
+    </div>
+  );
 };
 
 export default CourseDetail;

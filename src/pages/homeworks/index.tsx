@@ -1,16 +1,16 @@
-import Practice from '@/components/Practices/Practice';
+import HomeWork from '@/components/HomeWork/HomeWork';
 import Topbar from '@/components/Topbar/Topbar';
 import DefaultLayout from '@/components/layout/DefaultLayout';
 import React from 'react';
 
-const PracticePage = () => {
+const HomeworkPage = () => {
   return (
-    <DefaultLayout title={'Luyện tập | ITUTC2'}>
+    <DefaultLayout title={'Bài tập | ITUTC2'}>
       <div className=" my-8 place-content-center space-y-6">
-        <Practice />
+        <HomeWork />
       </div>
     </DefaultLayout>
   );
 };
 
-export default PracticePage;
+export default HomeworkPage;
