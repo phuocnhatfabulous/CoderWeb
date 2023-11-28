@@ -1,16 +1,12 @@
 import React from 'react';
-import CourseDetail from './CourseHeader';
+import CourseHeader from './CourseHeader';
+import CourseFooter from './CourseFooter';
 
 const CourseCard = () => {
   return (
-    <div className="grid relative gap-10 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ">
-      <CourseDetail />
-      <CourseDetail />
-      <CourseDetail />
-      <CourseDetail />
-      <CourseDetail />
-      <CourseDetail />
-      <CourseDetail />
+    <div className="mt-8 shadow-lg w-11/12 shadow-slate-400 rounded-xl">
+      <CourseHeader />
+      <CourseFooter />
     </div>
   );
 };
