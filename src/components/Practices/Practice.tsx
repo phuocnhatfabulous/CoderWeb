@@ -5,7 +5,7 @@ const Practice = () => {
   const [loadingProblems, setLoadingProblems] = useState(true);
 
   return (
-    <div>
+    <div className="select-none">
       <h1 className="mt-10 mb-5 text-center text-2xl font-medium uppercase text-dark-blue">
         &ldquo; HÃY ĐỌ SỨC VỚI CHUỖI BÀI LUYỆN &rdquo; 👇
       </h1>
