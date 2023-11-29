@@ -12,6 +12,7 @@ import Timer from '../Timer/Timer';
 import { useRouter } from 'next/router';
 import { problems } from '@/utils/problems';
 import { Problem } from '@/utils/types/problem';
+import Avatar from './Avatar';
 
 type TopbarProps = {
   problemPage?: boolean;
@@ -144,32 +145,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             </Link>
           )}
           {user && problemPage && <Timer />}
-          {user && (
-            <div className="group relative cursor-pointer">
-              <Image src="/avatar.svg" alt="Avatar" width={30} height={30} className="rounded-full" />
-              <div
-                className="
-                absolute 
-                top-10 
-                left-2/4 
-                z-40  
-                mx-auto 
-                -translate-x-2/4 
-                scale-0 
-                rounded 
-                bg-dark-layer-1 
-                p-2 		
-                text-brand-orange 
-                shadow-lg 
-                transition-all 			
-                duration-300
-                ease-in-out 
-                group-hover:scale-100"
-              >
-                <p className="text-sm">{user.email}</p>
-              </div>
-            </div>
-          )}
+          {user && <Avatar />}
           {user && <Logout />}
         </div>
       </div>
