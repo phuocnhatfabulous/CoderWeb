@@ -12,7 +12,8 @@ import Topbar from "@/components/Topbar/Topbar";
 export default function DefaultLayout({ title, children }: {
   title: String,
   // pageTitle: String,
-  children: React.ReactNode
+  children: React.ReactNode,
+  // problemPage: boolean,
 }) {
   // const { pageTitle: layoutPageTitle, setPageTitle } = useContext(LayoutContext)
   // useEffect(() => {
@@ -46,7 +47,7 @@ export default function DefaultLayout({ title, children }: {
         <title>{title}</title>
       </Head>
       <div className="flex min-h-400 flex-row justify-center mt-14 px-36 bg-white-blue">
-        <Topbar />
+        <Topbar problemPage />
         <div className="w-full space-y-6 min-h-screen">
           {/* <div className="flex h-full w-60 shrink-0" />
               <div className="flex flex-col h-screen relative max-w-full w-full"> */}

@@ -1,5 +1,6 @@
 import Topbar from "@/components/Topbar/Topbar";
 import Workspace from "@/components/Workspace/Workspace";
+import DefaultLayout from "@/components/layout/DefaultLayout";
 import useHasMounted from "@/hooks/useHasMounted";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
@@ -15,10 +16,14 @@ const ProblemPage: React.FC<ProblemPageProps> = ({ problem }) => {
 	if (!hasMounted) return null;
 
 	return (
-		<div>
-			<Topbar problemPage />
+		<DefaultLayout title={'Luyện tập | ITUTC2'}>
+      <div className=" my-8 place-content-center space-y-6">
 			<Workspace problem={problem} />
-		</div>
+      </div>
+    </DefaultLayout>
+		// <div>
+		// 	<Topbar problemPage />
+		// </div>
 	);
 };
 export default ProblemPage;
