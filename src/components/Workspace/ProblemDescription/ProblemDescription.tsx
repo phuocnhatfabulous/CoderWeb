@@ -192,7 +192,8 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
         </div>*/}
       </div>
 
-      <div className="flex h-[calc(100vh-94px)] overflow-y-auto px-0 py-4">
+      {/* <div className="flex h-[calc(100vh-94px)] overflow-y-auto px-0 py-4"> */}
+      <div className="flex h-[calc(100vh-54px)] overflow-y-auto px-0 py-4">
         <div className="px-5">
           {/* Problem heading */}
           <div className="w-full">
