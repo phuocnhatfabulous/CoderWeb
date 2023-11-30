@@ -7,7 +7,7 @@ import DefaultLayout from '@/components/layout/DefaultLayout';
 const CoursePage = () => {
   return (
     <DefaultLayout title={'Khóa học | ITUTC2'}>
-      <div className=" my-8 place-content-center space-y-6">
+      <div className=" my-8 place-content-center space-y-6 px-36">
         <Slider />
         <Course />
       </div>

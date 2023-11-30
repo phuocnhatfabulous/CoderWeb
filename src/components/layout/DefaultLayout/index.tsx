@@ -45,7 +45,7 @@ export default function DefaultLayout({ title, children }: {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="flex min-h-400 flex-row justify-center mt-14 px-36 bg-white-blue">
+      <div className="flex min-h-400 flex-row justify-center mt-14  bg-white-blue">
         <Topbar />
         <div className="w-full space-y-6 min-h-screen">
           {/* <div className="flex h-full w-60 shrink-0" />

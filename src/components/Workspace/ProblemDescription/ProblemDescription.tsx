@@ -186,7 +186,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
   return (
     <div className="select-none bg-dark-layer-1">
       {/* TAB */}
-      <div className="flex h-11 w-full mt-5 items-center overflow-x-hidden bg-dark-layer-2 pt-2 text-white">
+      <div className="mt-5 flex h-11 w-full items-center overflow-x-hidden bg-dark-layer-2 pt-2 text-white">
         {/*<div className={'cursor-pointer rounded-t-[5px] bg-dark-layer-1 px-5 py-[10px] text-base font-bold'}>
           Nội dung
         </div>*/}
@@ -265,7 +265,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
             <div className="mt-4">
               {problem.examples.map((example, index) => (
                 <div key={example.id}>
-                  <p className="font-medium text-white ">Example {index + 1}: </p>
+                  <p className="font-medium text-white ">Ví dụ {index + 1}: </p>
                   {example.img && <img src={example.img} alt="" className="mt-3" />}
                   <div className="example-card">
                     <pre>
