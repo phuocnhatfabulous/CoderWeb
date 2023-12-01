@@ -3,10 +3,14 @@ import React from 'react'
 
 const News = () => {
   return (
-    <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-2 relative bg-white-blue-50 h-6'>
-      <div className=''>
-        <Image src="/news-1.jpg" alt='Ngày nhà giáo Việt Nam 20/11/2023 tại UTC2' fill className='object-contain rounded-xl'/>
-        <span> Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span>
+    <div className='flex xl:md:flex-row sm:flex-col bg-white-blue-50 gap-16 p-6'>
+      <div className='w-1/2'>
+        <a href="h-full">
+          <div className=' w-full h-full relative p-6 flex flex-col gap-4'>
+            <Image src="/news-1.jpg" alt='Ngày nhà giáo Việt Nam 20/11/2023 tại UTC2' width={500} height={500} className='object-cover shrink-0 rounded-xl' />
+            <span className=''> Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span>
+          </div>
+        </a>
       </div>
       <div>
         <span className=''>Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span>
