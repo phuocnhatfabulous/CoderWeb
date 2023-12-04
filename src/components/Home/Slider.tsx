@@ -8,19 +8,47 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectCards } from "swiper/modules";
 import Image from "next/image";
 
-export default function Slider() {
+type SilderProps = {
+    newsPage ?: boolean
+}
+
+export default function Slider({newsPage}) {
     return (
-        <>
+        <> 
+        {newsPage ? 
+        <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+      :
             <Swiper
                 cssMode={true}
                 navigation={true}
-                pagination={true}
                 mousewheel={true}
                 keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
                 className="p-2 select-none w-2/3"
             >
                 <SwiperSlide>
@@ -48,6 +76,7 @@ export default function Slider() {
                     />
                 </SwiperSlide>
             </Swiper>
+}
         </>
     );
 }

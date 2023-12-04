@@ -1,5 +1,4 @@
 import React from 'react'
-import Topbar from '../Topbar/Topbar'
 import Slider from './Slider'
 import Course from '../Course/Course'
 import News from './News'
@@ -7,7 +6,7 @@ import News from './News'
 const HomePage = () => {
   return (
     <div className=' my-8 place-items-center space-y-8'>
-      <Slider />
+      <Slider newsPage={false} />
       <h2 className="text-brand-orange">Chào mừng đến với <span className='text-xl m-1 font-bold'>ITUTC2 Coder</span></h2>
       <div className='space-y-6'>
         <h2 className="h2-title">Tin tức & thông báo</h2>
@@ -33,7 +32,7 @@ const HomePage = () => {
         <h2 className="h2-title">Cuộc thi nổi bật</h2>
       </div>
       <div>
-        <h2 className="h2-title">Sinh viên IT nói gì về Bộ môn IT UTC2</h2>
+        <h2 className="h2-title">Sinh viên IT nói gì về  Bộ môn IT UTC2</h2>
       </div>
     </div>
   )
