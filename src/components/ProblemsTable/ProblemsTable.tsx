@@ -56,7 +56,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                     return (
                         <tr
                             className={`${
-                                idx % 2 == 1 ? "bg-white-blue-200" : ""
+                                idx % 2 == 1 ? "bg-white-blue-20" : ""
                             }`}
                             key={problem.id}
                         >
@@ -83,7 +83,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                                     </Link>
                                 )}
                             </td>
-                            <td className={`px-6 py-4 ${difficulyColor}`}>
+                            <td className={`px-6 py-4 font-semibold ${difficulyColor}`}>
                                 {problem.difficulty}
                             </td>
                             <td className={"px-6 py-4"}>{problem.category}</td>

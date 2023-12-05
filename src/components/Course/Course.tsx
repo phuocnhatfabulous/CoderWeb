@@ -1,12 +1,18 @@
-import React from "react";
-import CourseCard from "./CourseCard";
+import React, { useEffect } from 'react';
+import CourseCard from './CourseCard';
 
 const Course = () => {
-    return (
-        <div className="space-y-4">
-            <CourseCard />
-        </div>
-    );
+  
+  return (
+    <div className="grid relative gap-10 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 ">
+      <CourseCard />
+      <CourseCard />
+      <CourseCard />
+      <CourseCard />
+      <CourseCard />
+      
+    </div>
+  );
 };
 
 export default Course;

@@ -1,22 +1,56 @@
 import { authModalState } from '@/atoms/authModalAtom';
-import { auth } from '@/firebase/firebase';
+import { auth, firebase } from '@/firebase/firebase';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useEffect, useState, ChangeEvent, ClipboardEvent } from 'react';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSetRecoilState } from 'recoil';
 import { toast } from 'react-toastify';
+import { getAuth, GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 type LoginProps = {};
 
 const Login: React.FC<LoginProps> = () => {
+  //   const [users, setUser] = useAuthState(auth);
   const setAuthModalState = useSetRecoilState(authModalState);
   const handleClick = (type: 'login' | 'register' | 'forgotPassword') => {
     setAuthModalState((prev) => ({ ...prev, type }));
   };
+  const googleAuth = new GoogleAuthProvider();
+  const githubAuth = new GithubAuthProvider();
+
   const [inputs, setInputs] = useState({ email: '', password: '' });
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
   const router = useRouter();
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleLoginGoogle = async () => {
+    const result = await signInWithPopup(auth, googleAuth);
+    const user = result.user;
+    console.log(user);
+  };
+  const handleLoginGithub = async () => {
+    // const result = await signInWithPopup(auth, googleAuth);
+    const auth = getAuth();
+    signInWithPopup(auth, githubAuth)
+      .then((result) => {
+        const credential = GithubAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
+        const user = result.user;
+        console.log(credential);
+        // console.log(token);
+        console.log(user);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GithubAuthProvider.credentialFromError(error);
+        // ...
+      });
   };
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -47,7 +81,7 @@ const Login: React.FC<LoginProps> = () => {
     <form className="space-y-6 px-6 pb-4" onSubmit={handleLogin}>
       <h3 className="text-xl font-medium text-white">Chào mừng đến với ITUTC2 Coder</h3>
       <div>
-        <label htmlFor="email" className="text-sm font-medium block mb-2 text-gray-300">
+        <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-300">
           Email
         </label>
         <input
@@ -56,19 +90,19 @@ const Login: React.FC<LoginProps> = () => {
           name="email"
           id="email"
           className="
-                        border-2 
-                        outline-none 
-                        sm:text-sm 
+                        block 
+                        w-full 
                         rounded-lg 
-                        focus:ring-blue-500 
-                        focus:border-brand-orange
-                        block w-full 
-                        p-2.5
-                        bg-slate-300 
-                        caret-brand-orange
+                        border-2 
                         border-gray-500 
-                        placeholder-gray-400 
-                        text-white"
+                        bg-slate-300
+                        p-2.5 text-white 
+                        placeholder-gray-400
+                        caret-brand-orange 
+                        outline-none
+                        focus:border-brand-orange 
+                        focus:ring-blue-500 
+                        sm:text-sm"
           placeholder="username@gmail.com"
         />
       </div>
@@ -76,11 +110,11 @@ const Login: React.FC<LoginProps> = () => {
         <label
           htmlFor="password"
           className="
-                        text-sm 
-                        font-medium 
-                        block 
-                        mb-2 
-                        text-gray-300"
+                mb-2 
+                block 
+                text-sm 
+                font-medium 
+                text-gray-300"
         >
           Mật khẩu
         </label>
@@ -90,40 +124,57 @@ const Login: React.FC<LoginProps> = () => {
           name="password"
           id="password"
           className="
-                        border-2 
-                        outline-none 
-                        sm:text-sm 
-                        rounded-lg 
-                        focus:ring-blue-500 
-                        focus:border-brand-orange
-                        block w-full 
-                        p-2.5 
-                        bg-slate-300 
-                        caret-brand-orange
-                        border-gray-500 
-                        placeholder-gray-400 
-                        text-white"
-          placeholder="*******"
+                block 
+                w-full 
+                rounded-lg 
+                border-2 
+                border-gray-500 
+                bg-slate-300
+                p-2.5 text-white 
+                placeholder-gray-400 
+                caret-brand-orange 
+                outline-none
+                focus:border-brand-orange 
+                focus:ring-blue-500 
+                sm:text-sm"
+          placeholder="******123*"
         />
       </div>
 
       <button
         type="submit"
-        disabled={loading ? true : false}
-        className={`w-full text-white focus:ring-blue-300 font-medium rounded-lg shadow text-sm px-5 py-2.5 text-center bg-brand-orange hover:bg-brand-orange-s transition ease-in-out duration-150 ${loading ? 'cursor-not-allowed' : 'cursor-pointer opacity-40'}`}>
-        {loading ?
-          <div className='inline-flex items-center'>
-            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            Đăng nhập ...
-          </div>
-          : 'Đăng nhập'}
+        className="w-full rounded-full bg-brand-orange px-5 py-2.5
+            text-center text-sm font-medium text-white hover:bg-brand-orange-s focus:ring-blue-300
+        "
+      >
+        {loading ? 'Đang tải...' : 'Đăng nhập'}
       </button>
 
+      {/* Login GOOGLE GITHUB */}
+      <div className="relative grid gap-5 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
+        <button
+          onClick={handleLoginGithub}
+          type="submit"
+          className="w-50  rounded-full bg-white-blue px-5
+                    py-2.5 text-center text-sm font-semibold hover:bg-brand-orange-s focus:ring-blue-300
+                "
+        >
+          {loading ? 'Đang tải...' : 'GITHUB'}
+        </button>
+
+        <button
+          onClick={handleLoginGoogle}
+          type="submit"
+          className="w-50 rounded-full bg-white-blue px-5 py-2.5
+                    text-center text-sm font-semibold text-black hover:bg-brand-orange-s focus:ring-blue-300
+                "
+        >
+          {loading ? 'Đang tải...' : 'GOOGLE'}
+        </button>
+      </div>
+
       <button className="flex w-full justify-end" onClick={() => handleClick('forgotPassword')}>
-        <a href="#" className="text-sm block text-brand-orange hover:underline w-full text-right">
+        <a href="#" className="block w-full text-right text-sm text-brand-orange hover:underline">
           Quên mật khẩu
         </a>
       </button>
