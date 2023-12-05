@@ -13,9 +13,9 @@ const News = () => {
           </div>
         </a>
       </div>
-      <div className='flex '>
-        <span className=''>Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span>
-        {/* <Slider newsPage={true} /> */}
+      <div className='w-1/2 items-center flex flex-row'>
+        {/* <span className=''>Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span> */}
+        <Slider newsPage={true} />
       </div>
     </div>
   )

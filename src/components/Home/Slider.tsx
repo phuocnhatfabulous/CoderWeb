@@ -8,75 +8,107 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectCards } from "swiper/modules";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 
 type SilderProps = {
-    newsPage ?: boolean
+    newsPage?: boolean
 }
 
-export default function Slider({newsPage}) {
+export default function Slider({ newsPage }) {
     return (
-        <> 
-        {newsPage ? 
-        <Swiper
-        effect={'cards'}
-        grabCursor={true}
-        modules={[EffectCards]}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-      :
-            <Swiper
-                cssMode={true}
-                navigation={true}
-                mousewheel={true}
-                keyboard={true}
+        <>
+            {newsPage ?
+                <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-                className="p-2 select-none w-2/3"
-            >
+                pagination={true}
+                modules={[EffectCoverflow, Pagination, Autoplay]}
+                className="swiper-news"
+              >
                 <SwiperSlide>
-                    <Image
-                        src="/banner-1.png"
-                        alt="banner1"
-                        width={990}
-                        height={200}
-                    />
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-1.jpg" width={500} height={500} className="w-full h-full" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image
-                        src="/banner-1.png"
-                        alt="banner1"
-                        width={990}
-                        height={200}
-                    />
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-2.jpg" width={500} height={500} className="w-full h-full" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image
-                        src="/banner-1.png"
-                        alt="banner1"
-                        width={990}
-                        height={200}
-                    />
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-3.jpg" width={500} height={500} className="w-full h-full" />
                 </SwiperSlide>
-            </Swiper>
-}
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-4.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-5.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-6.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-7.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-8.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Image alt="" src="https://swiperjs.com/demos/images/nature-9.jpg" width={500} height={500} className="w-full h-full" />
+                </SwiperSlide>
+              </Swiper>
+                :
+                <Swiper
+                    cssMode={true}
+                    navigation={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+                    className="swiper-dash p-2 select-none w-2/3"
+                >
+                    <SwiperSlide>
+                        <Image
+                            src="/banner-1.png"
+                            alt="banner1"
+                            width={990}
+                            height={200}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Image
+                            src="/banner-1.png"
+                            alt="banner1"
+                            width={990}
+                            height={200}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Image
+                            src="/banner-1.png"
+                            alt="banner1"
+                            width={990}
+                            height={200}
+                        />
+                    </SwiperSlide>
+                </Swiper>
+            }
         </>
     );
 }

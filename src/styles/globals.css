@@ -18,18 +18,19 @@ body {
 
 @layer components {
     .preferenceBtn {
-        @apply relative rounded px-3 py-1.5 font-medium items-center transition-all focus:outline-none inline-flex  ml-auto p-1 mr-2 hover:bg-dark-fill-3;
+        @apply relative rounded px-3 py-1.5 font-medium items-center transition-all focus:outline-none inline-flex ml-auto p-1 mr-2 hover:bg-dark-fill-3;
     }
 
     .preferenceBtn-tooltip {
-        @apply absolute w-auto p-2 text-sm m-2  min-w-max translate-x-3  right-0 top-5 z-10 rounded-md shadow-md
-		text-dark-layer-2 bg-gray-200  origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100;
+        @apply absolute w-auto p-2 text-sm m-2 min-w-max translate-x-3 right-0 top-5 z-10 rounded-md shadow-md text-dark-layer-2 bg-gray-200 origin-center scale-0 transition-all duration-100 ease-linear group-hover:scale-100;
     }
+
     .h2-title {
         @apply text-center text-dark-blue text-2xl font-bold
     }
+
     .text-viewmore {
-        @apply text-center text-brand-orange font-semibold text-base 
+        @apply text-center text-brand-orange font-semibold text-base
     }
 }
 
@@ -51,6 +52,7 @@ body {
 .cm-gutters {
     background-color: #282828 !important;
 }
+
 .cm-focused {
     outline: none !important;
 }
@@ -65,6 +67,7 @@ body {
     background-repeat: no-repeat;
     background-position: 50%;
 }
+
 .gutter:hover {
     background-color: #0a84ff;
 }
@@ -105,33 +108,54 @@ code {
     padding: 1rem;
     white-space: pre-wrap;
 }
+
 .example-card pre strong {
     color: white;
     font-size: 1rem;
 }
+
 /* Slider */
 
-.swiper {
-	padding: 30px;
-	width: 80%;
-	height: 100%;
-  }
-  
-  .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-  
-	/* Center slide text vertically */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 40%;
-	object-fit: cover;
-	transform: scale(1);
-  }
+.swiper-dash {
+    padding: 30px;
+    width: 80%;
+    height: 100%;
+}
+
+.swiper-dash .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-dash .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+.swiper-news {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-news .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+}
+
+.swiper-news .swiper-slide img {
+    display: block;
+    width: 100%;
+}
