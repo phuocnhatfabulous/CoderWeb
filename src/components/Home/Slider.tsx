@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import { news } from "../../../mockNews/news";
+import Link from "next/link";
 
 type SilderProps = {
   newsPage?: boolean
@@ -25,20 +26,22 @@ export default function Slider({ newsPage }) {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={'auto'}
+
           coverflowEffect={{
-            rotate: 50,
+            rotate: 0,
             stretch: 0,
             depth: 100,
             modifier: 1,
             slideShadows: true,
+            scale: 0.9
           }}
-
+          spaceBetween={0}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           loop={true}
-          loopAdditionalSlides={4}
+          loopAdditionalSlides={1}
           pagination={
             { clickable: true }
           }
@@ -46,45 +49,20 @@ export default function Slider({ newsPage }) {
           className="swiper-news relative"
         >
           {
-            news.map((n, id) => {
-              <SwiperSlide className="static" key={id}>
-                <Image alt="" src="https://swiperjs.com/demos/images/nature-1.jpg" width={500} height={500} className="w-full h-full" />
-                <div className="static">
-                  <span></span>
-                </div>
-              </SwiperSlide>
+            news.map((n) => {
+              return (
+                <SwiperSlide className="relative" key={n.id}>
+                  <Link className="backdrop-blur-sm" href={n.link}>
+                    <Image alt={n.title} src={n.thumbnail} width={500} height={500} className="w-full h-full" />
+                    <div className="absolute bottom-2 bg-slate-500/30 z-50 p-2 items-center drop-shadow-xl m-2 rounded-xl backdrop-blur-sm">
+                      <span className="text-white-blue"> {n.title} </span>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              )
             })
           }
-          <SwiperSlide className="static">
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-1.jpg" width={500} height={500} className="w-full h-full" />
-            <div className="static">
-              <span></span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-2.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-3.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-4.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-5.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-6.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-7.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-8.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image alt="" src="https://swiperjs.com/demos/images/nature-9.jpg" width={500} height={500} className="w-full h-full" />
-          </SwiperSlide>
+
         </Swiper>
         :
         <Swiper
