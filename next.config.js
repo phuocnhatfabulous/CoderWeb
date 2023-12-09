@@ -2,11 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        hostname: 'swiperjs.com',
-      }
-    ],
+    domains: [
+      'swiperjs.com',
+      'utc2.edu.vn'
+    ]
   },
 }
 

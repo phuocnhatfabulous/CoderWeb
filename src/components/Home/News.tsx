@@ -4,7 +4,7 @@ import Slider from './Slider'
 
 const News = () => {
   return (
-    <div className='flex xl:md:flex-row sm:flex-col bg-white-blue-50 gap-16 p-6'>
+    <div className='flex xl:md:flex-row sm:flex-col gap-16 p-6 shadow-lg shadow-slate-400 rounded-xl'>
       <div className='w-1/2'>
         <a href="" className='h-full select-text'>
           <div className=' w-full h-full relative p-6 flex flex-col gap-4 select-text'>

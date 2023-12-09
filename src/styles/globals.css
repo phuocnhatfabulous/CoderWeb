@@ -146,12 +146,13 @@ code {
     border-radius: 10px !important;
     padding-top: 50px;
     padding-bottom: 50px;
+    /* perspective: 500px; */
 }
 
 .swiper-news .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 400px;
+    width: 420px;
     height: 300px;
     border-radius: 10px;
     align-items: center;
