@@ -41,7 +41,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-10 mb-5 flex w-full shrink-0 select-none items-center bg-dark-blue px-5 py-2 text-dark-gray-7 shadow-md shadow-white-blue-400">
+    <nav className="fixed top-0 left-0 z-50 mb-5 flex w-full shrink-0 select-none items-center bg-dark-blue px-5 py-2 text-dark-gray-7 shadow-md shadow-white-blue-400">
       <div className={`flex w-full items-center justify-between ${!problemPage ? 'mx-auto max-w-[1200px]' : ''}`}>
         <Link href="/" className="flex items-center">
           <Image src="/itcoder-logo.svg" alt="Logo" height={200} width={200} />

@@ -18,7 +18,7 @@ const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
   return (
     <div className="relative z-10 inline-block text-left">
       <div className="flex items-center justify-center">
-        <span className="rounded-md shadow-sm">
+        <span className="rounded-full items-center shadow-sm">
           <button
             type="button"
             className="inline-flex w-full justify-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-brand-orange active:bg-gray-50 active:text-gray-800"

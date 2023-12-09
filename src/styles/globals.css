@@ -143,6 +143,7 @@ code {
 
 .swiper-news {
     width: 100%;
+    border-radius: 10px !important;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -150,12 +151,14 @@ code {
 .swiper-news .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    width: 400px;
     height: 300px;
+    border-radius: 10px;
     align-items: center;
 }
 
 .swiper-news .swiper-slide img {
     display: block;
+    border-radius: 10px;
     width: 100%;
 }
