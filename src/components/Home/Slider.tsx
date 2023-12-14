@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay, EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
-import { news } from "../../../mockNews/news";
+import { news } from "../../mockNews/news";
 import Link from "next/link";
 
 type SilderProps = {
@@ -64,7 +64,7 @@ export default function Slider({ newsPage, blogPart }) {
                   <SwiperSlide className="relative" key={n.id}>
                     <Link className="backdrop-blur-sm" href={n.link}>
                       <Image alt={n.title} src={n.thumbnail} width={500} height={500} className="w-full h-full rounded-xl" />
-                      <div className="absolute bottom-2 bg-slate-500/30 z-50 p-2 items-center drop-shadow-xl m-2 rounded-xl backdrop-blur-sm hover:underline-offset-1 hover:underline text-white-blue">
+                      <div className="absolute bottom-2 bg-slate-500/30 z-50 p-2 flex items-center drop-shadow-xl m-2 rounded-xl backdrop-blur-sm hover:underline-offset-1 hover:underline text-white-blue">
                         <span className="text-white-blue sm:text-sm hover:underline-offset-1 hover:underline"> {getShortenedName()} </span>
                       </div>
                     </Link>

@@ -14,7 +14,6 @@ const News = () => {
         </a>
       </div>
       <div className='xl:lg:w-1/2 md:sm:w-full items-center flex flex-row'>
-        {/* <span className=''>Trang trọng và đầy cảm xúc trong Chương trình chào mừng ngày Nhà giáo Việt Nam 20/11 của UTC2</span> */}
         <Slider newsPage={true} blogPart={false} />
       </div>
     </div>
