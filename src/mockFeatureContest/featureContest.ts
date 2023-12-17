@@ -1,7 +1,7 @@
 export type FeatureContest = {
   id: string
   name: string
-  description: string[]
+  descriptions: string[]
   image: string
 }
 
@@ -9,7 +9,7 @@ export const featureContests: FeatureContest[] = [
   {
     id: "contest-1",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -24,9 +24,9 @@ export const featureContests: FeatureContest[] = [
     image: '/tech-war.png'
   },
   {
-    id: "contest-1",
+    id: "contest-2",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -38,12 +38,12 @@ export const featureContests: FeatureContest[] = [
       "+ 01 giải nhất: 4.000.000 đồng </br> + 02 giải nhì: 2.000.000 đồng </br> + 03 giải ba: 1.000.000 đồng </br> + 03 giải khuyến khích: 500.000 đồng",
       "Giải thưởng quá hấp dẫn phải không các bạn? Vậy còn chờ gì nữa mà không đăng kí tham gia ngay nào!!"
     ],
-    image: '/tech-war.png'
+    image: '/devol.jpg'
   },
   {
-    id: "contest-1",
+    id: "contest-3",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -55,12 +55,12 @@ export const featureContests: FeatureContest[] = [
       "+ 01 giải nhất: 4.000.000 đồng </br> + 02 giải nhì: 2.000.000 đồng </br> + 03 giải ba: 1.000.000 đồng </br> + 03 giải khuyến khích: 500.000 đồng",
       "Giải thưởng quá hấp dẫn phải không các bạn? Vậy còn chờ gì nữa mà không đăng kí tham gia ngay nào!!"
     ],
-    image: '/tech-war.png'
+    image: '/nckh.jpg'
   },
   {
-    id: "contest-1",
+    id: "contest-4",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -72,12 +72,12 @@ export const featureContests: FeatureContest[] = [
       "+ 01 giải nhất: 4.000.000 đồng </br> + 02 giải nhì: 2.000.000 đồng </br> + 03 giải ba: 1.000.000 đồng </br> + 03 giải khuyến khích: 500.000 đồng",
       "Giải thưởng quá hấp dẫn phải không các bạn? Vậy còn chờ gì nữa mà không đăng kí tham gia ngay nào!!"
     ],
-    image: '/tech-war.png'
+    image: '/cntt40.jpg'
   },
   {
-    id: "contest-1",
+    id: "contest-5",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -89,12 +89,12 @@ export const featureContests: FeatureContest[] = [
       "+ 01 giải nhất: 4.000.000 đồng </br> + 02 giải nhì: 2.000.000 đồng </br> + 03 giải ba: 1.000.000 đồng </br> + 03 giải khuyến khích: 500.000 đồng",
       "Giải thưởng quá hấp dẫn phải không các bạn? Vậy còn chờ gì nữa mà không đăng kí tham gia ngay nào!!"
     ],
-    image: '/tech-war.png'
+    image: '/olympicTH.jpg'
   },
   {
-    id: "contest-1",
+    id: "contest-6",
     name: 'Tech War',
-    description: [
+    descriptions: [
       '🎯 Là sân chơi để sinh viên thể hiện năng lực về lập trình, tạo môi trường thực hành để sinh viên rèn luyện trở thành những chuyên gia công nghệ, những lập trình viên có chất lượng.',
       '🎯 Dành cho sinh viên Việt Nam đang học tập tại các trường đại học, cao đẳng và học viện trên toàn quốc. Đăng ký dự thi theo đội gồm tối đa 03 thành viên (có thể là sinh viên ở cùng trường hoặc ở các trường khác nhau).',
       'Có một điều mà các đội chơi cũng như các bạn khán giả đang ngóng đợi đó là cơ cấu giải thưởng của cuộc thi năm nay. Và ngày hôm nay, BTC xin bật mí cơ cấu giải thưởng như sau:',
@@ -106,6 +106,6 @@ export const featureContests: FeatureContest[] = [
       "+ 01 giải nhất: 4.000.000 đồng </br> + 02 giải nhì: 2.000.000 đồng </br> + 03 giải ba: 1.000.000 đồng </br> + 03 giải khuyến khích: 500.000 đồng",
       "Giải thưởng quá hấp dẫn phải không các bạn? Vậy còn chờ gì nữa mà không đăng kí tham gia ngay nào!!"
     ],
-    image: '/tech-war.png'
+    image: '/ai.jpg'
   },
 ]
