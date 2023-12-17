@@ -100,15 +100,6 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
           </div>
           <div>
             <Link
-              href="/homeworks"
-              rel="noreferrer"
-              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
-            >
-              Bài tập
-            </Link>
-          </div>
-          <div>
-            <Link
               href="/contests"
               rel="noreferrer"
               className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
