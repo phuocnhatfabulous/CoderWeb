@@ -266,17 +266,17 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
             <div className="mt-4">
               {problem.examples.map((example, index) => (
                 <div key={example.id}>
-                  <p className="font-medium text-white ">Ví dụ {index + 1}: </p>
+                  <p className="font-medium text-white ">Examples {index + 1}: </p>
                   {example.img && <img src={example.img} alt="" className="mt-3" />}
                   <div className="example-card">
                     <pre>
-                      <div className="font-semibold text-white">Đầu vào: </div> {example.inputText}
+                      <div className="font-semibold text-white">Inputs: </div> {example.inputText}
                       <br />
-                      <div className="font-semibold text-white">Đầu ra:</div>
+                      <div className="font-semibold text-white">Outputs:</div>
                       {example.outputText} <br />
                       {example.explanation && (
                         <>
-                          <div className="font-semibold text-white">Giải thích:</div> {example.explanation}
+                          <div className="font-semibold text-white">Explanation:</div> {example.explanation}
                         </>
                       )}
                     </pre>
