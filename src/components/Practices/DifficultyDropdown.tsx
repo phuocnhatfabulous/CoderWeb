@@ -16,7 +16,7 @@ const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
   };
 
   return (
-    <div className="relative z-10 inline-block text-left">
+    <div className="relative inline-block text-left z-10">
       <div className="flex items-center justify-center">
         <span className="rounded-full items-center shadow-sm">
           <button
@@ -27,7 +27,7 @@ const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
             {selectedTags.length === 0 ? `${defaultValue}` : selectedTags.join(', ')}
             {/* Heroicon name: solid/chevron-down */}
             <svg
-              className="relative -mr-1 ml-2 inline-block flex h-5 w-5"
+              className="relative -mr-1 ml-2 inline-block h-5 w-5"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 15"
               fill="currentColor"
@@ -50,11 +50,10 @@ const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`flex w-full items-center px-4 py-2 text-sm leading-5 ${
-                  selectedTags.includes(tag)
-                    ? 'bg-brand-orange text-white focus:border-blue-700 focus:outline-none focus:ring focus:ring-blue-200 active:bg-brand-orange'
-                    : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-200 active:bg-gray-200'
-                }`}
+                className={`flex w-full items-center px-4 py-2 text-sm leading-5 ${selectedTags.includes(tag)
+                  ? 'bg-brand-orange text-white focus:border-blue-700 focus:outline-none focus:ring focus:ring-blue-200 active:bg-brand-orange'
+                  : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-200 active:bg-gray-200'
+                  }`}
               >
                 {selectedTags.includes(tag) && (
                   <svg

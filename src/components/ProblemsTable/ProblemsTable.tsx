@@ -28,7 +28,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
         videoId: "",
     });
     const problems = useGetProblems(setLoadingProblems);
-    console.log("problems==========", problems)
+    // console.log("problems==========", problems)
 
     const solvedProblems = useGetSolvedProblems();
     console.log("solvedProblems", solvedProblems);
@@ -50,9 +50,9 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
             <tbody className="text-dark-blue">
                 {problems.map((problem, idx) => {
                     const difficulyColor =
-                        problem.difficulty === "Dễ"
+                        problem.difficulty === "Easy"
                             ? "text-dark-green-s"
-                            : problem.difficulty === "Trung bình"
+                            : problem.difficulty === "Medium"
                                 ? "text-dark-yellow"
                                 : "text-dark-pink";
                     return (
@@ -112,7 +112,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                 })}
             </tbody>
             {youtubePlayer.isOpen && (
-                <tfoot className="fixed top-0 left-0 h-screen w-screen flex items-center justify-center">
+                <tfoot className="fixed z-50 top-0 left-0 h-screen w-screen flex items-center justify-center">
                     <div
                         className="bg-black z-10 opacity-70 top-0 left-0 w-screen h-screen absolute"
                         onClick={closeModal}
