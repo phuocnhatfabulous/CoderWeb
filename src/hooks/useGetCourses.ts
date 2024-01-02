@@ -1,9 +1,9 @@
 import { firestore } from '@/firebase/firebase';
 import { DBCourse } from '@/utils/types/course';
 import { collection, getDocs, orderBy, query } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function useGetCourses(
+export function useGetCourses(
     setLoadingCourses: React.Dispatch<React.SetStateAction<boolean>>
 ) {
     const [courses, setCourses] = useState<DBCourse[]>([]);
@@ -14,7 +14,7 @@ function useGetCourses(
             setLoadingCourses(true);
             const q = query(
                 collection(firestore, 'courses'),
-                orderBy('order', 'asc')
+                orderBy('viewCount', 'desc')
             );
             const querySnapshot = await getDocs(q);
             const tmp: DBCourse[] = [];
