@@ -12,6 +12,7 @@ import Timer from '../Timer/Timer';
 import { useRouter } from 'next/router';
 import { problems } from '@/utils/problems';
 import { Problem } from '@/utils/types/problem';
+import UserMenu from '../Navbar/UserMenu';
 
 type TopbarProps = {
   problemPage?: boolean;
@@ -40,7 +41,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-10 mb-5 flex w-full shrink-0 items-center bg-dark-blue px-5 py-2 text-dark-gray-7 shadow-md shadow-white-blue-400">
+    <nav className="fixed top-0 left-0 z-50 mb-5 flex w-full shrink-0 select-none items-center bg-dark-blue px-5 py-2 text-dark-gray-7 shadow-md shadow-white-blue-400">
       <div className={`flex w-full items-center justify-between ${!problemPage ? 'mx-auto max-w-[1200px]' : ''}`}>
         <Link href="/" className="flex items-center">
           <Image src="/itcoder-logo.svg" alt="Logo" height={200} width={200} />
@@ -99,15 +100,6 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
           </div>
           <div>
             <Link
-              href="/homeworks"
-              rel="noreferrer"
-              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
-            >
-              Bài tập
-            </Link>
-          </div>
-          <div>
-            <Link
               href="/contests"
               rel="noreferrer"
               className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
@@ -144,32 +136,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             </Link>
           )}
           {user && problemPage && <Timer />}
-          {user && (
-            <div className="group relative cursor-pointer">
-              <Image src="/avatar.svg" alt="Avatar" width={30} height={30} className="rounded-full" />
-              <div
-                className="
-                absolute 
-                top-10 
-                left-2/4 
-                z-40  
-                mx-auto 
-                -translate-x-2/4 
-                scale-0 
-                rounded 
-                bg-dark-layer-1 
-                p-2 		
-                text-brand-orange 
-                shadow-lg 
-                transition-all 			
-                duration-300
-                ease-in-out 
-                group-hover:scale-100"
-              >
-                <p className="text-sm">{user.email}</p>
-              </div>
-            </div>
-          )}
+          {user && <UserMenu />}
           {user && <Logout />}
         </div>
       </div>
