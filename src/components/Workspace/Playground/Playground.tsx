@@ -4,6 +4,9 @@ import Split from 'react-split';
 import CodeMirror from '@uiw/react-codemirror';
 import { vscodeDark } from '@uiw/codemirror-theme-vscode';
 import { javascript } from '@codemirror/lang-javascript';
+import { cpp } from '@codemirror/lang-cpp';
+import { java } from '@codemirror/lang-java';
+import { python } from '@codemirror/lang-python';
 import EditorFooter from './EditorFooter';
 import { Problem } from '@/utils/types/problem';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,6 +33,7 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
   const [activeTestCaseId, setActiveTestCaseId] = useState<number>(0);
   let [userCode, setUserCode] = useState<string>(problem.starterCode);
 
+  const [executionTime, setExecutionTime] = useState<number | null>(null);
   const [fontSize, setFontSize] = useLocalStorage('lcc-fontSize', '16px');
 
   const [settings, setSettings] = useState<ISettings>({
@@ -62,7 +66,7 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
         if (success) {
           toast.success('Congrats! All tests passed!', {
             position: 'top-center',
-            autoClose: 3000,
+            autoClose: 5000,
             theme: 'dark',
           });
           setSuccess(true);
@@ -119,16 +123,21 @@ const Playground: React.FC<PlaygroundProps> = ({ problem, setSuccess, setSolved 
             value={userCode}
             theme={vscodeDark}
             onChange={onChange}
-            extensions={[javascript()]}
+            extensions={[javascript(), cpp(), python(), java()]}
             style={{ fontSize: settings.fontSize }}
           />
         </div>
         <div className="w-full overflow-auto px-5">
-          {/* testcase heading */}
           <div className="flex h-10 items-center space-x-6">
+          {/* testcase heading */}
             <div className="relative flex h-full cursor-pointer flex-col justify-center">
-              <div className="text-sm font-medium leading-5 text-white">Testcases</div>
+              <div className="text-sm font-medium leading-5 text-white">Test cases</div>
               <hr className="absolute bottom-0 h-0.5 w-full rounded-full border-none bg-white" />
+            </div>
+          {/* execution heading */}
+            <div className="relative flex h-full cursor-pointer flex-col justify-center">
+              <div className="text-sm font-medium leading-5 text-white">Execution</div>
+              <hr className="absolute bottom-0 h-0.5 w-full rounded-full border-none " />
             </div>
           </div>
 

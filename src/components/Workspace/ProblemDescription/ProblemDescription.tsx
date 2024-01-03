@@ -320,9 +320,9 @@ function useGetCurrentProblem(problemId: string) {
         setCurrentProblem({ id: docSnap.id, ...problem } as DBProblem);
         // easy, medium, hard
         setProblemDifficultyClass(
-          problem.difficulty === 'Dễ'
+          problem.difficulty === 'Easy'
             ? 'bg-olive text-olive'
-            : problem.difficulty === 'Trung bình'
+            : problem.difficulty === 'Medium'
               ? 'bg-dark-yellow text-dark-yellow'
               : ' bg-dark-pink text-dark-pink',
         );
@@ -357,7 +357,7 @@ function useGetUsersDataOnProblem(problemId: string) {
         const data = userSnap.data();
         const { solvedProblems, likedProblems, dislikedProblems, starredProblems } = data;
         setData({
-          liked: likedProblems.includes(problemId), // likedProblems["two-sum","jump-game"]
+          liked: likedProblems.includes(problemId), 
           disliked: dislikedProblems.includes(problemId),
           starred: starredProblems.includes(problemId),
           solved: solvedProblems.includes(problemId),
