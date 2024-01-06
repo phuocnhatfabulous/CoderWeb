@@ -13,6 +13,7 @@ import { useRouter } from 'next/router';
 import { problems } from '@/utils/problems';
 import { Problem } from '@/utils/types/problem';
 import UserMenu from '../Navbar/UserMenu';
+import { useSetUserRole } from '@/hooks/useSetUserRole';
 
 type TopbarProps = {
   problemPage?: boolean;
@@ -22,6 +23,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   const [user] = useAuthState(auth);
   const setAuthModalState = useSetRecoilState(authModalState);
   const router = useRouter();
+  const userRole = useSetUserRole()
 
   const handleProblemChange = (isForward: boolean) => {
     const { order } = problems[router.query.pid as string] as Problem;
@@ -89,6 +91,26 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               Khóa học
             </Link>
           </div>
+          {userRole == 'giangvien' && (
+            <div>
+              <Link
+                href="/classes"
+                rel="noreferrer"
+                className="
+              cursor-pointer 
+              select-none 
+              rounded 
+              py-1.5 
+              px-3 
+              text-brand-orange
+              hover:bg-dark-fill-2
+              "
+              >
+                Nhóm/Lớp
+              </Link>
+            </div>
+
+          )}
           <div>
             <Link
               href="/practices"
