@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Contest = () => {
-  return <div>Contest</div>;
+  return <div></div>;
 };
 
 export default Contest;

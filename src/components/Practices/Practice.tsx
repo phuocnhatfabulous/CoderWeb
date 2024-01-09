@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ProblemsTable from '../ProblemsTable/ProblemsTable';
 import DropDown from '../Workspace/DropDown';
 import DifficultyDropdown from './DifficultyDropdown';
+import CategoryDropdown from './CategoryDropdown';
+import StatusDropdown from './DifficultyDropdown';
 import SearchBar from './SearchBar';
 
 const Practice = () => {
@@ -14,10 +16,9 @@ const Practice = () => {
       </h1>
       <div className="container mx-auto p-4">
         <div className=" flex flex-row justify-center gap-2 px-10 text-3xl font-medium">
-          <DifficultyDropdown defaultValue={'Danh sách'} />
           <DifficultyDropdown defaultValue={'Mức độ'} />
-          <DifficultyDropdown defaultValue={'Trạng thái'} />
-          <DifficultyDropdown defaultValue={'Chủ đề'} />
+          <StatusDropdown defaultValue={'Trạng thái'} />
+          <CategoryDropdown defaultValue={'Chủ đề'} />
           <SearchBar />
         </div>
         {/* Add the rest of your content here */}

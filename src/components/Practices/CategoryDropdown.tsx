@@ -1,11 +1,11 @@
 // TagDropdown.js
 import React, { useState } from 'react';
 
-const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
+const CategoryDropdown = ({ defaultValue }: { defaultValue: String }) => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const availableTags = ['Easy', 'Medium', 'Hard'];
+  const availableTags = ['Array', 'String', 'Matrix'];
 
   const toggleTag = (tag) => {
     const updatedTags = selectedTags.includes(tag)
@@ -76,4 +76,4 @@ const DifficultyDropdown = ({ defaultValue }: { defaultValue: String }) => {
   );
 };
 
-export default DifficultyDropdown;
+export default CategoryDropdown;

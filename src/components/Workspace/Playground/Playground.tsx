@@ -16,6 +16,7 @@ import { problems } from '@/utils/problems';
 import { useRouter } from 'next/router';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import useLocalStorage from '@/hooks/useLocalStorage';
+import React from 'react';
 
 type PlaygroundProps = {
   problem: Problem;

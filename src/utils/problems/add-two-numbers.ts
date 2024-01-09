@@ -36,7 +36,7 @@ const handlerAddTwoNumber = (fn: any) => {
         }
         return true;
     } catch (error: any) {
-        console.log('twoSum handler function error');
+        console.log('Add Two Number handler function error');
         throw new Error(error);
     }
 };
