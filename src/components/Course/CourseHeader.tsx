@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { useGetCourses } from '@/hooks/useGetCourses';
 
 type CourseHeaderProps = {
   thumbnail: string

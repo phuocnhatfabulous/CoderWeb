@@ -29,3 +29,5 @@ export function useGetCourses(
     }, [setLoadingCourses]);
     return courses;
 }
+
+export function useGetCourseByLimit() {}
