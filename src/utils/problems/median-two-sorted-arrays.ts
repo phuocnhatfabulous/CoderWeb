@@ -74,6 +74,6 @@ The overall run time complexity should be <code>O(log (m+n))</code>.
 </li>`,
     handlerFunction: handlerAddMedianTwoArray,
     starterCode: starterCodeAddMedianTwoArray,
-    order: 4,
+    order: 302,
     starterFunctionName: 'function findMedianSortedArrays(',
 };

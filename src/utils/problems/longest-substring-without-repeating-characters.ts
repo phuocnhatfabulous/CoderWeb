@@ -67,6 +67,6 @@ export const longestSubstring: Problem = {
 </li>`,
     handlerFunction: handlerLongestSubstring,
     starterCode: starterCodeLongestSubstring,
-    order: 3,
+    order: 301,
     starterFunctionName: 'function lengthOfLongestSubstring(',
 };
