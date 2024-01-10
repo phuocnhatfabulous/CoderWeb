@@ -9,7 +9,7 @@ type AuthPageProps = {
   studentPage?: React.ReactNode
 }
 
-const Authorized: React.FC<AuthPageProps> = ({ teacherPage, studentPage }) => {
+const ProtectedPage: React.FC<AuthPageProps> = ({ teacherPage, studentPage }) => {
   const [user, loading, error] = useAuthState(auth)
   const [userRole, setUserRole] = useState("")
 
@@ -60,9 +60,11 @@ const Authorized: React.FC<AuthPageProps> = ({ teacherPage, studentPage }) => {
   }
   else {
     return (
-      <p>Bạn không có quyền truy cập trang này. Quay lại <Link href='/'>Trang chủ</Link></p>
+      <div className='items-center justify-center w-full h-full flex'>
+        <p className='text-center font-bold text-dark-blue text-xl shadow-md'>Bạn không có quyền truy cập trang này. Quay lại <Link href='/'>Trang chủ</Link></p>
+      </div>
     )
   }
 }
 
-export default Authorized
+export default ProtectedPage
