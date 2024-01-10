@@ -109,7 +109,6 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
                 Nhóm/Lớp
               </Link>
             </div>
-
           )}
           <div>
             <Link
@@ -120,24 +119,28 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               Luyện tập
             </Link>
           </div>
-          <div>
-            <Link
-              href="/contests"
-              rel="noreferrer"
-              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
-            >
-              Cuộc thi
-            </Link>
-          </div>
-          <div>
-            <Link
-              href="/ranks"
-              rel="noreferrer"
-              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
-            >
-              Xếp hạng
-            </Link>
-          </div>
+          {userRole == 'sinhvien' && (
+            <div>
+              <Link
+                href="/contests"
+                rel="noreferrer"
+                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+              >
+                Cuộc thi
+              </Link>
+            </div>
+          )}
+          {userRole == 'sinhvien' && (
+            <div>
+              <Link
+                href="/ranks"
+                rel="noreferrer"
+                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+              >
+                Xếp hạng
+              </Link>
+            </div>
+          )}
         </div>
 
         <div className="flex items-center justify-start space-x-4">

@@ -5,7 +5,7 @@ import React from 'react';
 const ContestPage = () => {
   return (
     <DefaultLayout title={'Cuộc thi | ITUTC2'}>
-      <div className=" my-8 place-content-center space-y-6">
+      <div className="w-full h-full items-center my-8 place-content-center space-y-6">
         <Contest />
       </div>
     </DefaultLayout>

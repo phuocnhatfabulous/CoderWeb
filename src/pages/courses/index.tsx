@@ -4,9 +4,12 @@ import React from 'react';
 import Slider from '@/components/Home/Slider';
 import DefaultLayout from '@/components/layout/DefaultLayout';
 import Image from 'next/image';
+import { useSetUserRole } from '@/hooks/useSetUserRole';
+import TeachCourse from '@/components/Course/TeachCourse';
 
 const CoursePage = () => {
-  return (
+  const userRole = useSetUserRole()
+  {userRole == 'sinhvien' && (
     <DefaultLayout title={'Khóa học | ITUTC2'}>
       <div className=" my-8 place-content-center space-y-6 px-36">
         <div className='flex flex-col space-y-2'>
@@ -26,7 +29,16 @@ const CoursePage = () => {
         </div>
       </div>
     </DefaultLayout>
-  );
+  )};
+  return (
+    <DefaultLayout title={'Khóa học | ITUTC2'}>
+       <div className=" my-8 place-content-center space-y-6 px-36">
+        <div className='flex flex-col space-y-2'>
+          <TeachCourse />
+        </div>
+      </div>
+    </DefaultLayout>
+  )
 };
 
 export default CoursePage;
