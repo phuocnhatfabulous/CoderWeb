@@ -86,6 +86,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               px-3 
               text-brand-orange
               hover:bg-dark-fill-2
+              active:bg-brand-orange/70
               "
             >
               Khóa học
@@ -104,6 +105,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               px-3 
               text-brand-orange
               hover:bg-dark-fill-2
+              active:bg-brand-orange/70
               "
               >
                 Nhóm/Lớp
@@ -114,7 +116,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
             <Link
               href="/practices"
               rel="noreferrer"
-              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+              className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2 active:bg-brand-orange/70"
             >
               Luyện tập
             </Link>
@@ -124,7 +126,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               <Link
                 href="/contests"
                 rel="noreferrer"
-                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2 active:bg-brand-orange/70"
               >
                 Cuộc thi
               </Link>
@@ -135,7 +137,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
               <Link
                 href="/ranks"
                 rel="noreferrer"
-                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2"
+                className="cursor-pointer select-none rounded py-1.5 px-3 text-brand-orange hover:bg-dark-fill-2 active:bg-brand-orange/70"
               >
                 Xếp hạng
               </Link>
