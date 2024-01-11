@@ -30,10 +30,10 @@ const HomePage = () => {
           </svg>
         </div>
       </div>
-      <div className='space-y-6'>
+      {/* <div className='space-y-6'>
         <h2 className="h2-title">Cuộc thi nổi bật</h2>
         <FeatureContest isScroll={true} />
-      </div>
+      </div> */}
       <div className='space-y-6'>
         <h2 className="h2-title">Sinh viên IT nói gì về Bộ môn IT UTC2</h2>
         <Blogs />
