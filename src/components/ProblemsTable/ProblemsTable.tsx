@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BsCheckCircle } from "react-icons/bs";
 import { AiFillYoutube } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
+import { TfiReload } from "react-icons/tfi";
 import YouTube from "react-youtube";
 import {
     collection,
@@ -102,9 +103,10 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({
                                         }
                                     />
                                 ) : (
-                                    <p className="text-cyan-700">
-                                        Đang cập nhật
-                                    </p>
+                                    // <p className="text-cyan-700">
+                                    //     Updating
+                                    // </p>
+                                    <TfiReload fontSize={"19"} className=""/>
                                 )}
                             </td>
                         </tr>
