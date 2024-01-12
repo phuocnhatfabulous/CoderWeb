@@ -42,11 +42,11 @@ body {
         @apply text-center text-brand-orange font-semibold text-base;
     }
 
-    td:nth-child(2) {
+    .course-table td:nth-child(2) {
         @apply rounded-lg text-brand-orange;
     }
 
-    td {
+    .course-table td {
         @apply p-3 text-deep-blue border-b;
     }
 }
@@ -180,21 +180,21 @@ code {
     width: 100%;
 }
 .container {
-  @apply text-center;
+    @apply text-center;
 }
 
 .logo {
-  @apply mb-4;
+    @apply mb-4;
 }
 
 .heading {
-  @apply text-4xl font-bold mb-4;
+    @apply text-4xl font-bold mb-4;
 }
 
 .description {
-  @apply text-lg;
+    @apply text-lg;
 }
 
 .timer {
-  @apply text-2xl font-bold my-4;
+    @apply text-2xl font-bold my-4;
 }

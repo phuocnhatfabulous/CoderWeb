@@ -36,17 +36,17 @@ const CourseDetail = () => {
       <div className='bg-white-blue-30 w-3/4 h-72 items-center rounded-lg shadow-xl flex flex-row p-4 justify-around'>
         <div className='w-2/3 space-y-3 flex flex-col pl-4'>
           <h2 className='h2-title text-start'>Khóa học: <span>Cấu trúc và Dữ liệu</span></h2>
-          <p className='description text-navy-blue-500 font-semibold'> Môn &quot;Cấu trúc và Dữ liệu&quot; là một khoá học cơ bản trong lĩnh vực khoa học máy tính, tập trung vào việc giới thiệu và phân tích các cấu trúc dữ liệu và thuật toán cơ bản</p>
+          <p className='description text-navy-blue-500 font-normal text-base'> Môn &quot;Cấu trúc và Dữ liệu&quot; là một khoá học cơ bản trong lĩnh vực khoa học máy tính, tập trung vào việc giới thiệu và phân tích các cấu trúc dữ liệu và thuật toán cơ bản</p>
           <div className='flex space-x-2 items-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
             </svg>
-            <p className='description font-bold text-dark-blue'> Giảng viên:  <span className='text-navy-blue-500 font-medium'> Th.S Trần Thị Dung </span></p>
+            <p className='description font-bold text-dark-blue'> Giảng viên:  <span className='text-navy-blue-500 font-normal'> Th.S Trần Thị Dung </span></p>
           </div>
 
           <div className='flex space-x-2 items-center'>
             <Image src={'/alarm-clock.png'} alt='' width={20} height={20} />
-            <p className='font-bold text-dark-blue'>Thời lượng: <span className='text-navy-blue-500 font-medium'>4 giờ 45 phút</span></p>
+            <p className='font-bold text-dark-blue'>Thời lượng: <span className='text-navy-blue-500 font-normal'>4 giờ 45 phút</span></p>
           </div>
           <div className=' flex space-x-6 items-end mt-2'>
             <button onClick={handleEnrolled} disabled={enrolled} className={`${enrolled ? 'bg-green-600 disabled:cursor-not-allowed hover:bg-slate-500' : 'bg-deep-blue'}  rounded-lg p-2 text-white px-3 hover:bg-deep-blue/80`}> {enrolled ? 'Đã tham gia' : 'Tham gia'} </button>
@@ -59,13 +59,13 @@ const CourseDetail = () => {
           </div>
         </div>
         <div className='w-1/3 pr-4'>
-          <Image src='/course-1.png' alt='' width={500} height={400} className='rounded-lg' />
+          <Image src='/course-4.png' alt='' width={500} height={400} className='rounded-lg' />
         </div>
       </div>
       <div className='flex flex-col w-3/4 space-y-4'>
         <h2 className='h2-title text-start'> Nội dung </h2>
         <div className='items-center w-full place-items-center'>
-          <table className='bg-white-blue-100 w-full rounded-lg p-4 shadow-lg'>
+          <table className='course-table bg-white-blue-100 w-full rounded-lg p-4 shadow-lg'>
             <tbody className='rounded-lg'>
               <tr className='rounded-lg'>
                 <td>
@@ -238,7 +238,7 @@ const CourseDetail = () => {
         </div>
       </div>
       <div className='flex flex-col w-3/4 space-y-4'>
-        <h2 className='h2-title text-start'> Bình luận </h2>
+        <h2 className='h2-title text-start'> Bình luận <span className='text-sm'>(Coming soon)</span></h2>
         <div className='flex items-center w-full place-items-center text-deep-blue space-x-2'>
           <textarea className='border border-dark-blue rounded-lg w-full h-8 active:border active:border-dark-blue p-2 min-h-' />
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 -rotate-45">
