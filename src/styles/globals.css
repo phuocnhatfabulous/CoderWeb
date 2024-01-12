@@ -162,3 +162,22 @@ code {
     border-radius: 10px;
     width: 100%;
 }
+.container {
+  @apply text-center;
+}
+
+.logo {
+  @apply mb-4;
+}
+
+.heading {
+  @apply text-4xl font-bold mb-4;
+}
+
+.description {
+  @apply text-lg;
+}
+
+.timer {
+  @apply text-2xl font-bold my-4;
+}
