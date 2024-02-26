@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProblemsTable from '../ProblemsTable/ProblemsTable';
 import DropDown from '../Workspace/DropDown';
 import DifficultyDropdown from './DifficultyDropdown';
-import CategoryDropdown from './CategoryDropdown';
+// import CategoryDropdown from './CategoryDropdown';
 import StatusDropdown from './DifficultyDropdown';
 import SearchBar from './SearchBar';
 
@@ -18,7 +18,7 @@ const Practice = () => {
         <div className=" flex flex-row justify-center gap-2 px-10 text-3xl font-medium">
           <DifficultyDropdown defaultValue={'Mức độ'} />
           <StatusDropdown defaultValue={'Trạng thái'} />
-          <CategoryDropdown defaultValue={'Chủ đề'} />
+          {/* <CategoryDropdown defaultValue={'Chủ đề'} /> */}
           <SearchBar />
         </div>
         {/* Add the rest of your content here */}
