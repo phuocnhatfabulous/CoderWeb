@@ -17,7 +17,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue, isEditMode }) => {
             setErrors('');
             return true;
         } else {
-            let errorFields = [];
+            let errorFields: string[] = [];
             for (const [key, value] of Object.entries(formState)) {
                 if (!value) {
                     errorFields.push(key);
@@ -46,10 +46,10 @@ export const Modal = ({ closeModal, onSubmit, defaultValue, isEditMode }) => {
         <div
             className="fixed z-10 left-0 top-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center"
             onClick={(e) => {
-                if (
-                    e.target.className ===
-                    'fixed z-10 left-0 top-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center'
-                )
+                // if (
+                //     e.target.className ===
+                //     'fixed z-10 left-0 top-0 w-full h-full bg-black bg-opacity-40 flex items-center justify-center'
+                // )
                     closeModal();
             }}
         >
