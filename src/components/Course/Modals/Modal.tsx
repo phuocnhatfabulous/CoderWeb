@@ -16,16 +16,17 @@ export const Modal = ({ closeModal, onSubmit, defaultValue, isEditMode }) => {
         if (formState.title && formState.description && formState.status) {
             setErrors('');
             return true;
-        } else {
-            let errorFields: string[] = [];
-            for (const [key, value] of Object.entries(formState)) {
-                if (!value) {
-                    errorFields.push(key);
-                }
-            }
-            setErrors(errorFields.join(', '));
-            return false;
-        }
+        } 
+        // else {
+        //     let errorFields: string[] = [];
+        //     for (const [key, value] of Object.entries(formState)) {
+        //         if (!value) {
+        //             errorFields.push(key);
+        //         }
+        //     }
+        //     setErrors(errorFields.join(', '));
+        //     return false;
+        // }
     };
 
     const handleChange = (e) => {
